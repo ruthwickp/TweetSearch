@@ -8,42 +8,23 @@
 
 #import "TweetViewController.h"
 
-@interface TweetViewController ()
+@interface TweetViewController () <UITableViewDataSource, UITableViewDelegate>
+// Outlets to UIControls
+@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+@property (weak, nonatomic) IBOutlet UISlider *batchSlider;
+@property (weak, nonatomic) IBOutlet UISegmentedControl *sortSegmentedControl;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
 @implementation TweetViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
+// Displays only tweets located in a certain map area
+- (IBAction)filterByMapButtonPressed {
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+// Get called when slider moves to certain value
+// Displays number of tweets from that value
+- (IBAction)movedBatchSlider:(UISlider *)sender {
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
