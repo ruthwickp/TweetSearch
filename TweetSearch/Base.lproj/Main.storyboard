@@ -172,6 +172,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="l2h-L4-1P4" id="EnM-ud-KWV"/>
+                                </connections>
                             </textField>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lbY-3f-Uyy">
                                 <rect key="frame" x="20" y="141" width="142" height="29"/>
@@ -180,6 +183,9 @@
                                     <segment title="Newest"/>
                                     <segment title="Oldest"/>
                                 </segments>
+                                <connections>
+                                    <action selector="sortTweetsChanged:" destination="l2h-L4-1P4" eventType="valueChanged" id="W8Q-9P-REG"/>
+                                </connections>
                             </segmentedControl>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="500" minValue="1" maxValue="1000" translatesAutoresizingMaskIntoConstraints="NO" id="Wep-SO-jLY">
                                 <rect key="frame" x="113" y="103" width="189" height="31"/>

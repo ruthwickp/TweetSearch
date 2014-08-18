@@ -10,7 +10,7 @@
 #import "AppDelegate.h"
 #import "Tweet.h"
 
-@interface TweetViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface TweetViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 // Outlets to UIControls
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UISlider *batchSlider;
@@ -42,6 +42,8 @@
     return _managedObjectContext;
 }
 
+#pragma mark - Control Buttons
+
 // Displays only tweets located in a certain map area
 - (IBAction)filterByMapButtonPressed {
 }
@@ -49,10 +51,35 @@
 // Get called when slider moves to certain value
 // Controls batch value for the fetchedResultsController
 - (IBAction)movedBatchSlider:(UISlider *)sender {
-    NSLog(@"%f", sender.value);
     [NSFetchedResultsController deleteCacheWithName:self.fetchedResultsController.cacheName];
     [self.fetchedResultsController.fetchRequest setFetchBatchSize:sender.value];
     [self performFetchOnDifferentQueue];
+}
+
+// Action when user returns textField
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    // Removes keyboard when return is pressed
+    [textField resignFirstResponder];
+    
+    // Displays tweets containing the string
+    [NSFetchedResultsController deleteCacheWithName:self.fetchedResultsController.cacheName];
+    NSString *searchText = [[textField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]] isEqualToString:@""] ? @"" : textField.text;
+    NSPredicate *predicate = ![searchText isEqualToString:@""] ? [NSPredicate predicateWithFormat:@"content CONTAINS %@", searchText] : nil;
+    [self.fetchedResultsController.fetchRequest setPredicate:predicate];
+    [self performFetchOnDifferentQueue];
+    return YES;
+}
+
+// Action determines whether to sort Tweets by newest or oldest
+- (IBAction)sortTweetsChanged:(UISegmentedControl *)sender
+{
+    [NSFetchedResultsController deleteCacheWithName:self.fetchedResultsController.cacheName];
+    BOOL ascending = sender.selectedSegmentIndex == 0 ? NO : YES;
+    self.fetchedResultsController.fetchRequest.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"timestamp"
+                                                                                                 ascending:ascending]];
+    [self performFetchOnDifferentQueue];
+
 }
 
 // Performs the fetch on a different queue
@@ -66,7 +93,6 @@
         });
     });
 }
-
 
 #pragma mark - Table View
 
