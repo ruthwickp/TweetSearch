@@ -29,6 +29,8 @@
 		7DA27EB7199FB38700C1CE39 /* TwitterUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA27EB6199FB38700C1CE39 /* TwitterUser.m */; };
 		7DA27EBA199FB38700C1CE39 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA27EB9199FB38700C1CE39 /* Tweet.m */; };
 		7DA27EBD199FB38700C1CE39 /* HashTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA27EBC199FB38700C1CE39 /* HashTag.m */; };
+		7DA27EC0199FBF6900C1CE39 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA27EBF199FBF6900C1CE39 /* MapKit.framework */; };
+		7DA27EC1199FF5CC00C1CE39 /* TwitterMap.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7DA27EBE199FB3AA00C1CE39 /* TwitterMap.sqlite */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,7 @@
 		7DA27EBB199FB38700C1CE39 /* HashTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HashTag.h; sourceTree = "<group>"; };
 		7DA27EBC199FB38700C1CE39 /* HashTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HashTag.m; sourceTree = "<group>"; };
 		7DA27EBE199FB3AA00C1CE39 /* TwitterMap.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = TwitterMap.sqlite; sourceTree = "<group>"; };
+		7DA27EBF199FBF6900C1CE39 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA27EC0199FBF6900C1CE39 /* MapKit.framework in Frameworks */,
 				7DA27E6A199FA28700C1CE39 /* CoreGraphics.framework in Frameworks */,
 				7DA27E6E199FA28700C1CE39 /* CoreData.framework in Frameworks */,
 				7DA27E6C199FA28700C1CE39 /* UIKit.framework in Frameworks */,
@@ -124,6 +128,7 @@
 		7DA27E66199FA28700C1CE39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7DA27EBF199FBF6900C1CE39 /* MapKit.framework */,
 				7DA27E67199FA28700C1CE39 /* Foundation.framework */,
 				7DA27E69199FA28700C1CE39 /* CoreGraphics.framework */,
 				7DA27E6B199FA28700C1CE39 /* UIKit.framework */,
@@ -272,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DA27EC1199FF5CC00C1CE39 /* TwitterMap.sqlite in Resources */,
 				7DA27E88199FA28700C1CE39 /* Images.xcassets in Resources */,
 				7DA27E74199FA28700C1CE39 /* InfoPlist.strings in Resources */,
 				7DA27E7D199FA28700C1CE39 /* Main.storyboard in Resources */,

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>AE48E26A-88BE-4350-B00A-73265B056F0C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TweetSearch</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>F2A1934B-57F0-426A-ADED-AF1209BA6BE3</key>
+		<string>https://github.com/ruthwickp/TweetSearch.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TweetSearch.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>F2A1934B-57F0-426A-ADED-AF1209BA6BE3</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ruthwickp/TweetSearch.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>F2A1934B-57F0-426A-ADED-AF1209BA6BE3</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>F2A1934B-57F0-426A-ADED-AF1209BA6BE3</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TweetSearch</string>
+		</dict>
+	</array>
+</dict>
+</plist>

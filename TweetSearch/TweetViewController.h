@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import "DetailViewController.h"
 
-@interface TweetViewController : UIViewController
+
+@interface TweetViewController : UIViewController <NSFetchedResultsControllerDelegate>
+
+@property (strong, nonatomic) DetailViewController *detailViewController;
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 
 @end
