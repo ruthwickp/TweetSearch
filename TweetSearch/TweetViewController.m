@@ -8,7 +8,8 @@
 
 #import "TweetViewController.h"
 #import "AppDelegate.h"
-#import "Tweet.h"
+#import "Tweet+Annotation.h"
+#import "TwitterUser.h"
 
 @interface TweetViewController () <UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>
 // Outlets to UIControls
@@ -91,8 +92,17 @@
         [self performFetch];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self.tableView reloadData];
+            [self setTopTweetsOnMap];
         });
     });
+}
+
+// Sets the Top Tweets on Map by assigning tweets into
+// the detail view controller's array
+- (void)setTopTweetsOnMap
+{
+    NSUInteger maxRange = [[self.fetchedResultsController fetchedObjects] count] > 100 ? 100 : [[self.fetchedResultsController fetchedObjects] count];
+    self.detailViewController.topTweets = [[self.fetchedResultsController fetchedObjects] objectsAtIndexes:[[NSIndexSet alloc] initWithIndexesInRange:NSMakeRange(0, maxRange)]];
 }
 
 #pragma mark - Table View
@@ -115,18 +125,12 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSManagedObject *object = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-    self.detailViewController.detailItem = object;
-}
-
 // Configures cell for tableview
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
 {
     Tweet *tweet = [self.fetchedResultsController objectAtIndexPath:indexPath];
     cell.textLabel.text = tweet.content;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", tweet.timestamp];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@", tweet.user.username];
 }
 
 

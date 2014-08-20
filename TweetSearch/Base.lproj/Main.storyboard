@@ -31,16 +31,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="703" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d1h-My-QMh">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="d1h-My-QMh">
                                 <rect key="frame" x="0.0" y="65" width="703" height="703"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="d1h-My-QMh" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="1" id="Dg2-yX-7lT"/>
+                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="d1h-My-QMh" secondAttribute="bottom" id="T4j-6u-RfG"/>
+                            <constraint firstItem="d1h-My-QMh" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="hAL-St-kCO"/>
+                            <constraint firstAttribute="trailing" secondItem="d1h-My-QMh" secondAttribute="trailing" id="kpL-3H-GW3"/>
+                        </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
+                    <navigationItem key="navigationItem" title="Tweet Map" id="mOI-FS-AaM"/>
                     <connections>
                         <outlet property="mapView" destination="d1h-My-QMh" id="3WP-0V-UOo"/>
                     </connections>
@@ -141,7 +147,7 @@
                             <outlet property="delegate" destination="7bK-jq-Zjz" id="RA6-mI-bju"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="Zdf-7t-Un8"/>
+                    <navigationItem key="navigationItem" title="TweetSearch" id="Zdf-7t-Un8"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
             </objects>

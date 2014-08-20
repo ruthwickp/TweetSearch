@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "Tweet+Annotation.h"
 
 // Displays Tweets on a mapview
 @interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
@@ -16,4 +17,5 @@
 @property (strong, nonatomic) NSArray *topTweets;
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+
 @end
