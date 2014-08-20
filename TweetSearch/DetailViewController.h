@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <MapKit/MapKit.h>
 
+// Displays Tweets on a mapview
 @interface DetailViewController : UIViewController <UISplitViewControllerDelegate>
 
-@property (strong, nonatomic) id detailItem;
+// Array consist of top 100 tweets to display
+@property (strong, nonatomic) NSArray *topTweets;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 @end

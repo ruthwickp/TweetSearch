@@ -31,6 +31,7 @@
 		7DA27EBD199FB38700C1CE39 /* HashTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DA27EBC199FB38700C1CE39 /* HashTag.m */; };
 		7DA27EC0199FBF6900C1CE39 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7DA27EBF199FBF6900C1CE39 /* MapKit.framework */; };
 		7DA27EC1199FF5CC00C1CE39 /* TwitterMap.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 7DA27EBE199FB3AA00C1CE39 /* TwitterMap.sqlite */; };
+		7DD42A3319A4115A0059AD58 /* Tweet+Annotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7DD42A3219A4115A0059AD58 /* Tweet+Annotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		7DA27EBC199FB38700C1CE39 /* HashTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HashTag.m; sourceTree = "<group>"; };
 		7DA27EBE199FB3AA00C1CE39 /* TwitterMap.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = TwitterMap.sqlite; sourceTree = "<group>"; };
 		7DA27EBF199FBF6900C1CE39 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7DD42A3119A4115A0059AD58 /* Tweet+Annotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Tweet+Annotation.h"; sourceTree = "<group>"; };
+		7DD42A3219A4115A0059AD58 /* Tweet+Annotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Tweet+Annotation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +194,8 @@
 		7DA27EB4199FB35000C1CE39 /* Core Data Model */ = {
 			isa = PBXGroup;
 			children = (
+				7DD42A3119A4115A0059AD58 /* Tweet+Annotation.h */,
+				7DD42A3219A4115A0059AD58 /* Tweet+Annotation.m */,
 				7DA27EBB199FB38700C1CE39 /* HashTag.h */,
 				7DA27EBC199FB38700C1CE39 /* HashTag.m */,
 				7DA27EB8199FB38700C1CE39 /* Tweet.h */,
@@ -301,6 +306,7 @@
 			files = (
 				7DA27EBA199FB38700C1CE39 /* Tweet.m in Sources */,
 				7DA27EA7199FA29E00C1CE39 /* TweetViewController.m in Sources */,
+				7DD42A3319A4115A0059AD58 /* Tweet+Annotation.m in Sources */,
 				7DA27E86199FA28700C1CE39 /* DetailViewController.m in Sources */,
 				7DA27EAA199FB0A400C1CE39 /* TwitterMap.xcdatamodeld in Sources */,
 				7DA27E83199FA28700C1CE39 /* MasterViewController.m in Sources */,
@@ -514,6 +520,7 @@
 				7DA27EA1199FA28700C1CE39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7DA27EA2199FA28800C1CE39 /* Build configuration list for PBXNativeTarget "TweetSearchTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +529,7 @@
 				7DA27EA4199FA28800C1CE39 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
